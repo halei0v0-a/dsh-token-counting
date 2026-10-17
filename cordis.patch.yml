@@ -1,0 +1,6 @@
+# dsh-token-counting plugin bundle layer.
+# Installed via `dsh plugin add` — this patch inserts the plugin into the
+# web profile's plugin list (id-targeted loader patch entries).
+- insert:
+    - id: token-counting
+      name: '@dsh-local/token-counting'

@@ -1,0 +1,25 @@
+{
+  "name": "@dsh-local/token-counting",
+  "description": "Token usage for the dsh web surface: per-session badge in the conversation title, a compact sidebar card with cumulative tokens and a 30-day line chart above the Settings foot, and a click-open detail overlay (migrated out of the Settings panel)",
+  "version": "0.1.0",
+  "type": "module",
+  "main": "lib/index.js",
+  "exports": {
+    ".": "./lib/index.js",
+    "./client": "./lib/client.js",
+    "./package.json": "./package.json"
+  },
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web",
+      "inject": [
+        "@deepseek-ai/dsh-client-runtime",
+        "@deepseek-ai/dsh-client-locale"
+      ]
+    }
+  },
+  "license": "MIT"
+}
